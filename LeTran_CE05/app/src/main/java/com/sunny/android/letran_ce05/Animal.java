@@ -5,22 +5,24 @@
 
 package com.sunny.android.letran_ce05;
 
-public class Animal {
+class Animal {
 
     // Member variables
-    private String name;
-    private int age;
-    private boolean isFriendly;
-    private String job;
-    private String hobby;
+    private final String name;
+    private final int age;
+    private final boolean isFriendly;
+    private final String job;
+    private final String hobby;
+    private final int imageID;
 
     // Constructor
-    public Animal(String _name, int _age, boolean _isFriendly, String _job, String _hobby) {
+    public Animal(String _name, int _age, boolean _isFriendly, String _job, String _hobby, int _imageID) {
         name = _name;
         age = _age;
         isFriendly = _isFriendly;
         job = _job;
         hobby = _hobby;
+        imageID = _imageID;
     }
 
     // Methods
@@ -29,4 +31,5 @@ public class Animal {
     boolean getFriendly() { return isFriendly; }
     String getJob() { return job; }
     String getHobby() { return hobby; }
+    int getImageID() { return imageID; }
 }

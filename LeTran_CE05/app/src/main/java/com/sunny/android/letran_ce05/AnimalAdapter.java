@@ -14,12 +14,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class AnimalAdapter extends BaseAdapter {
+class AnimalAdapter extends BaseAdapter {
 
     // Member variables
     private static final long BASE_ID = 0x00001;
-    private Context aContext = null;
-    private ArrayList<Animal> animals = null;
+    private final Context aContext;
+    private final ArrayList<Animal> animals;
 
     // Constructor
     public AnimalAdapter(Context _context, ArrayList<Animal> _animals) {
@@ -51,7 +51,7 @@ public class AnimalAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder vh = null;
+        ViewHolder vh;
 
         if (convertView == null) {
             convertView = LayoutInflater.from(aContext).inflate(R.layout.listview_custom, parent, false);
@@ -73,8 +73,8 @@ public class AnimalAdapter extends BaseAdapter {
 
     // Optimize with ViewHolder
     static class ViewHolder {
-        TextView txt_Name;
-        TextView txt_Age;
+        final TextView txt_Name;
+        final TextView txt_Age;
 
         ViewHolder(View _layout) {
             txt_Name = (TextView)_layout.findViewById(R.id.txt_CustomName);

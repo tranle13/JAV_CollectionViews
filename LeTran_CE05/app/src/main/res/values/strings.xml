@@ -18,4 +18,6 @@
         <item>Zebra</item>
     </string-array>
     <string name="imageView">Image Holder</string>
+    <string name="_friendly">Yes</string>
+    <string name="_unfriendly">Nope</string>
 </resources>
