@@ -17,4 +17,5 @@
         <item>Tiger</item>
         <item>Zebra</item>
     </string-array>
+    <string name="imageView">Image Holder</string>
 </resources>
