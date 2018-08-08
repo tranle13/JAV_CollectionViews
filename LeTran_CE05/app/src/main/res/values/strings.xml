@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">LeTran_CE05</string>
+    <string name="name">Name:</string>
+    <string name="age">Age:</string>
+    <string name="hobby">Hobby:</string>
+    <string name="job">Occupation:</string>
+    <string name="friendly">Friendly:</string>
+    <string-array name="animals">
+        <item>Bear</item>
+        <item>Marten</item>
+        <item>Octopus</item>
+        <item>Ostrich</item>
+        <item>Raccoon</item>
+        <item>Rooster</item>
+        <item>Seagull</item>
+        <item>Seal</item>
+        <item>Tiger</item>
+        <item>Zebra</item>
+    </string-array>
 </resources>
