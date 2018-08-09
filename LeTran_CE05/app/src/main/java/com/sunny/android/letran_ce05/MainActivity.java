@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         helpPopulate(defaultIndex);
     }
 
+    // Function to detect orientation change
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -91,10 +92,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Create function to help populate
+    // Create function to help populate depending on orientation
     private void helpPopulate(int _position) {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-            populateDetails(_position, R.id.imageView, R.id.txt_Name, R.id.txt_Age, R.id.txt_Friendly, R.id.txt_Occupation, R.id.txt_Hobby);
+            populateDetails(_position, R.id.imageView, R.id.txt_Name, R.id.txt_Age, R.id.txt_Friendly,
+                    R.id.txt_Occupation, R.id.txt_Hobby);
+
             aListView = (ListView)findViewById(R.id.lvw_ListView);
             setupCustomAdapter();
             aListView.setOnItemClickListener(new ListView.OnItemClickListener() {
@@ -105,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         } else {
-            populateDetails(_position, R.id.imageView2, R.id.txt_Land_Name, R.id.txt_Land_Age, R.id.txt_Land_Friendly, R.id.txt_Land_Job, R.id.txt_Land_Hobby);
             Spinner dropdown = (Spinner)findViewById(R.id.spn_Dropdown);
             dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
